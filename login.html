@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<center>
+
+    <head>
+        <h2>Student Details</h2>
+    </head>
+
+    <body>
+
+        Name:
+        <input type="text" placeholder="name" id="user">
+        <br>
+        Age:
+        <input type="number" placeholder="age" id="number">
+        <br>
+        Date of birthday:
+        <input type="date" placeholder="birthday" id="birthday">
+        <br>
+        Gender:
+        Male:<input name="radio" value="male" id="male" type="radio" checked>
+        Female<input name="radio" value="female" id="female" type="radio">
+        <br>
+        <input type="submit" onclick="myfunction()" id="demo">
+
+        <p id="result"></p>
+    </body>
+    <script>
+        function myfunction() {
+            var input = document.getElementById('user');
+            var srt = document.getElementById('number');
+            var srt1 = document.getElementById('birthday');
+            var srt2 = document.getElementById('male');
+            var srt3 = document.getElementById('female');
+            var str4 = " "
+            if (srt2.checked) {
+                str4 = srt2.value
+            } else {
+                str4 = srt3.value
+            }
+            document.getElementById('result').innerHTML= input.value+ "\n" +srt.value+" \n "+ srt1.value+" \n "+ str4
+
+        }
+    </script>
+</center>
+
+</html>
